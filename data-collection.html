@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Crime Watcher - Data Collection</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Data Collection Simulation</h1>
+        <p>Simulating the process of gathering suspicious cryptocurrency addresses from multiple online sources.</p>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="dashboard.html">Dashboard</a> |
+            <a href="analytics.html">Analytics</a> |
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="data-collection">
+            <h2>Scanning Sources...</h2>
+            <p>The system is now simulating data gathering from public blockchains, forums, and dark web sources.</p>
+            
+            <!-- Progress Simulation -->
+            <div id="progressContainer" style="background:#1f1f1f; border:2px solid #00ff9d; border-radius:8px; width:80%; margin:20px auto; height:30px;">
+                <div id="progressBar" style="background:#00ff9d; height:100%; width:0%; border-radius:8px;"></div>
+            </div>
+            
+            <p id="progressText">Initializing scan...</p>
+
+            <div id="resultMessage" style="display:none;">
+                <h3>✅ Data Collection Complete</h3>
+                <p>Suspicious addresses have been identified and loaded into the dashboard. You can now view them for analysis.</p>
+                <button onclick="window.location.href='dashboard.html'">Go to Dashboard</button>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Team Name. Built for SIH 2025.</p>
+    </footer>
+
+    <script>
+        // Simple fake progress bar simulation
+        const progressBar = document.getElementById('progressBar');
+        const progressText = document.getElementById('progressText');
+        const resultMessage = document.getElementById('resultMessage');
+
+        let progress = 0;
+        const stages = [
+            "Connecting to blockchain nodes...",
+            "Scanning dark web sources...",
+            "Analyzing transaction patterns...",
+            "Cross-verifying wallet risk levels...",
+            "Finalizing dataset..."
+        ];
+
+        const interval = setInterval(() => {
+            progress += 20;
+            progressBar.style.width = progress + '%';
+            progressText.textContent = stages[progress / 20 - 1] || "Finalizing...";
+
+            if (progress >= 100) {
+                clearInterval(interval);
+                progressText.textContent = "Data collection complete.";
+                resultMessage.style.display = 'block';
+            }
+        }, 1500);
+    </script>
+</body>
+</html>

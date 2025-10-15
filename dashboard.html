@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Crime Watcher - Dashboard</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Crypto Crime Watcher Dashboard</h1>
+        <p>View and analyze suspicious cryptocurrency addresses.</p>
+        <nav>
+            <a href="index.html">Home</a> |
+            <a href="analytics.html">Analytics</a> |
+            <a href="about.html">About</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="dashboard">
+            <h2>Suspicious Addresses Overview</h2>
+            
+            <!-- Search Bar -->
+            <input type="text" id="searchInput" placeholder="Search by address, category, or source...">
+            
+            <!-- Export Buttons -->
+            <div class="export-buttons">
+                <button id="exportCSV">Export as CSV</button>
+                <button id="exportJSON">Export as JSON</button>
+            </div>
+            
+            <!-- Data Table -->
+            <table id="addressTable">
+                <thead>
+                    <tr>
+                        <th>Address</th>
+                        <th>Category</th>
+                        <th>Source</th>
+                        <th>Activity</th>
+                        <th>Last Seen</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table rows will be populated dynamically via JavaScript (to be added later) -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 Your Team Name. Built for SIH 2025.</p>
+    </footer>
+</body>
+<script src="js/data.js"></script>
+<script src="js/dashboard.js"></script>
+
+</html>

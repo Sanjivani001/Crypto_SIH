@@ -1,0 +1,165 @@
+/* Import fonts from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&family=Roboto+Mono&display=swap');
+
+/* Global Styles */
+body {
+    font-family: 'Poppins', sans-serif; /* Primary font for readability */
+    background-color: #121212; /* Dark background for dark mode */
+    color: #ffffff; /* White text for contrast */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    font-family: 'Roboto Mono', monospace; /* Modern, techy font for headings */
+    color: #00ff9d; /* Neon green highlight for a cybersecurity feel */
+}
+
+a {
+    color: #00aaff; /* Neon blue for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header Styles */
+header {
+    background-color: #1f1f1f; /* Slightly lighter dark shade for headers */
+    padding: 20px;
+    text-align: center;
+    border-bottom: 2px solid #00ff9d; /* Green border for emphasis */
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+/* Main Content Styles */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Center content */
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+/* Table Styles (for dashboard.html) */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #1f1f1f; /* Dark table background */
+    color: #ffffff;
+}
+
+table th, table td {
+    padding: 10px;
+    border: 1px solid #333; /* Subtle border for cells */
+    text-align: left;
+}
+
+table th {
+    background-color: #00aaff; /* Blue background for headers */
+    color: #000; /* Dark text for contrast */
+}
+
+/* Risk Level Color-Coding */
+.high-risk {
+    background-color: #ff4444; /* Red for high risk */
+    color: #ffffff;
+}
+
+.medium-risk {
+    background-color: #ffbb33; /* Yellow for medium risk */
+    color: #000;
+}
+
+.low-risk {
+    background-color: #00ff9d; /* Green for low risk */
+    color: #000;
+}
+
+/* Chart Container Styles (for analytics.html) */
+.chart-container {
+    background-color: #1f1f1f;
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #00ff9d; /* Green border for charts */
+}
+
+canvas {
+    max-width: 100%; /* Make charts responsive */
+}
+
+/* Button Styles */
+button {
+    background-color: #00aaff; /* Blue buttons */
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-family: 'Roboto Mono', monospace;
+}
+
+button:hover {
+    background-color: #00ff9d; /* Green on hover for transition effect */
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1f1f1f;
+    border-top: 2px solid #00ff9d;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    main {
+        padding: 10px;
+    }
+    
+    table, table thead, table tbody, table th, table td, table tr {
+        display: block; /* Stack tables on mobile */
+    }
+    
+    table thead tr {
+        display: none; /* Hide headers on small screens */
+    }
+    
+    table tr {
+        margin-bottom: 10px;
+    }
+    
+    table td {
+        text-align: right;
+        padding-left: 50%; /* Indent for readability */
+        position: relative;
+    }
+    
+    table td::before {
+        content: attr(data-label); /* Use data attributes for headers */
+        position: absolute;
+        left: 0;
+        width: 45%;
+        padding-left: 10px;
+        font-weight: bold;
+        text-align: left;
+    }
+}
+
+/* Simple Animation for Icons or Elements */
+.rotating {
+    animation: rotate 2s linear infinite; /* For any rotating elements, e.g., icons */
+}
+
+@keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
